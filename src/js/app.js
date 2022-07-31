@@ -17,3 +17,5 @@ for (let i = 0; i < table.length; i++) {
     document.getElementById("table").appendChild(div);
   }
 }
+
+const btn = document.getElementById("btn");

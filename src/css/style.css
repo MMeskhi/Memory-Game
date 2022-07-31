@@ -10,10 +10,10 @@ body {
 
 #table {
     position: relative;
-    margin: 100px auto;
-    border: 1px solid #fff;
-    width: 500px;
-    height: 500px;
+    margin: 100px auto 50px;
+    border: 1px solid #222;
+    width: 502px;
+    height: 502px;
 }
 
 #table div {
@@ -27,4 +27,26 @@ body {
 
     position: absolute;
     transition: all .3s;
+}
+
+#btn div {
+    position: relative;
+}
+
+#btn button {
+    height: 40px;
+    width: 120px;
+    background-color: #a0ea99;
+    color: #5c1263;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#btn button:hover {
+    background-color: #a0ea99d7;
 }
