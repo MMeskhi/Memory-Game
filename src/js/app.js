@@ -15,6 +15,10 @@ for (let i = 0; i < table.length; i++) {
     div.dataset.i = i;
     div.dataset.j = j;
     document.getElementById("table-a").appendChild(div);
+    if (window.matchMedia("(max-width: 525px)").matches) {
+      div.style.top = i * 50 + "px";
+      div.style.left = j * 50 + "px";
+    }
   }
 }
 

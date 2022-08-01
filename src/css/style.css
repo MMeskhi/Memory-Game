@@ -161,3 +161,22 @@ body {
     color: #ffffff;
     display: none;
 }
+
+@media all and (max-width: 525px) {
+    #table-a {
+        width: 252px;
+        height: 252px;
+    }
+
+    #table-a div {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        line-height: 50px;
+    }
+
+    .card {
+        width: 50px;
+        height: 50px;
+    }
+}
