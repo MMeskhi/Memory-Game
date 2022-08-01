@@ -30,10 +30,9 @@ function start() {
 }
 
 function stop() {
-  document.getElementById("table-a").style.display = "";
-  document.getElementById("table-b").style.display = "none";
   document.getElementById("timer").style.display = "none";
   document.getElementById("timer-stop").style.display = "revert";
+  preventClick = true;
 }
 
 btn.addEventListener("click", start);
@@ -108,8 +107,9 @@ function onCardClicked(e) {
     } else {
       combosFound++;
       clickedCard = null;
-      if (combosFound === 12) {
-        alert("YOU WIN");
+      if (combosFound === 1) {
+        document.getElementById("alert").innerHTML = "<h1>YOU WON!</h1>";
+        stop();
       }
     }
   }
@@ -122,7 +122,7 @@ function timer() {
 
   if (timeLeft === 0) {
     clearInterval(timerStart);
-    alert("Game Over");
+    document.getElementById("alert").innerHTML = "<h1>Game Over</h1>";
     stop();
   }
 }

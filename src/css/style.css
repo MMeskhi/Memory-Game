@@ -147,19 +147,28 @@ body {
     background-color: #a0ea99d7;
 }
 
+#timerAndAlert {
+    margin-bottom: 30px;
+}
+
 #timer {
     text-align: center;
-    margin-bottom: 30px;
     font-size: 28px;
-    color: #ffffff;
+    color: #a0ea99;
 }
 
 #timer-stop {
     text-align: center;
-    margin-bottom: 30px;
     font-size: 28px;
-    color: #ffffff;
+    color: #a0ea99;
     display: none;
+}
+
+#alert {
+    text-align: center;
+    font-size: 16px;
+    color: #a0ea99;
+    margin-top: 10px;
 }
 
 @media all and (max-width: 525px) {
