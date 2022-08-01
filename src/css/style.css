@@ -8,15 +8,19 @@ body {
     background-color: #5c1263;
 }
 
-#table {
+.cont {
+    margin: 5% auto 50px;
+}
+
+#table-a {
     position: relative;
-    margin: 100px auto 50px;
+    margin: 0 auto;
     border: 1px solid #222;
     width: 502px;
     height: 502px;
 }
 
-#table div {
+#table-a div {
     width: 100px;
     height: 100px;
     border: 1px solid;
@@ -26,7 +30,99 @@ body {
     background: #ffffff;
 
     position: absolute;
-    transition: all .3s;
+    transition: all .2s;
+}
+
+#table-a div:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px 1px red;
+    box-sizing: border-box;
+}
+
+#table-b {
+    display: none;
+}
+
+.row {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.card.done {
+    cursor: default;
+}
+
+.card.done:hover {
+    cursor: default;
+    box-shadow: none;
+}
+
+.card:hover {
+    box-shadow: inset 0px 0px 0px 1px red;
+    box-sizing: border-box;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.teal {
+    background-color: teal;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.gold {
+    background-color: gold
+}
+
+.color-hidden {
+    background-color: #ffffff;
 }
 
 #btn div {
@@ -49,4 +145,19 @@ body {
 
 #btn button:hover {
     background-color: #a0ea99d7;
+}
+
+#timer {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+#timer-stop {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffffff;
+    display: none;
 }
