@@ -107,7 +107,7 @@ function onCardClicked(e) {
     } else {
       combosFound++;
       clickedCard = null;
-      if (combosFound === 1) {
+      if (combosFound === 12) {
         document.getElementById("alert").innerHTML = "<h1>YOU WON!</h1>";
         stop();
       }
