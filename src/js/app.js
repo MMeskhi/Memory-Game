@@ -31,7 +31,6 @@ function start() {
 
 function stop() {
   document.getElementById("timer").style.display = "none";
-  document.getElementById("timer-stop").style.display = "revert";
   preventClick = true;
 }
 
