@@ -35,6 +35,7 @@ function start() {
 function stop() {
   document.getElementById("timer").style.display = "none";
   preventClick = true;
+  clickedCard = null;
 }
 
 function startOver() {
@@ -75,6 +76,7 @@ const colors = [
 ];
 
 const cards = [...document.querySelectorAll(".card")];
+
 for (let color of colors) {
   const cardAIndex = parseInt(Math.random() * cards.length);
   const cardA = cards[cardAIndex];
@@ -123,7 +125,7 @@ function onCardClicked(e) {
       combosFound++;
       clickedCard = null;
       if (combosFound === 18) {
-        document.getElementById("alert").innerHTML = "<h1>YOU WON!</h1>";
+        document.getElementById("alert").innerHTML = "<h1>YOU WIN!</h1>";
         stop();
         btnAgain.style.display = "flex";
       }
