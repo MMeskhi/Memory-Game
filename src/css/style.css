@@ -5,19 +5,19 @@
 }
 
 body {
-    background-color: #5c1263;
+    background-color: #030e4f;
 }
 
 .cont {
-    margin: 5% auto 50px;
+    margin: 2.5% auto 50px;
 }
 
 #table-a {
     position: relative;
     margin: 0 auto;
     border: 1px solid #222;
-    width: 502px;
-    height: 502px;
+    width: 602px;
+    height: 602px;
 }
 
 #table-a div {
@@ -73,6 +73,77 @@ body {
     box-sizing: border-box;
 }
 
+.btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    background-color: #f49f1c;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 90%;
+}
+
+.btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#timerAndAlert {
+    margin-bottom: 30px;
+}
+
+#timer {
+    text-align: center;
+    font-size: 28px;
+    color: #f49f1c;
+}
+
+#timer-stop {
+    text-align: center;
+    font-size: 28px;
+    color: #f49f1c;
+    display: none;
+}
+
+#alert {
+    text-align: center;
+    font-size: 16px;
+    color: #f49f1c;
+    margin-top: 10px;
+}
+
+@media all and (max-width: 525px) {
+    #table-a {
+        width: 301px;
+        height: 301px;
+    }
+
+    #table-a div {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        line-height: 50px;
+    }
+
+    .card {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 .red {
     background-color: red;
 }
@@ -121,71 +192,34 @@ body {
     background-color: gold
 }
 
+.black {
+    background-color: #222;
+}
+
+.darkblue {
+    background-color: darkblue;
+}
+
+.darkred {
+    background-color: darkred;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+}
+
+.hotpink {
+    background-color: hotpink;
+}
+
+.coral {
+    background-color: coral;
+}
+
+.beige {
+    background-color: beige;
+}
+
 .color-hidden {
     background-color: #ffffff;
-}
-
-#btn div {
-    position: relative;
-}
-
-#btn button {
-    height: 40px;
-    width: 120px;
-    background-color: #a0ea99;
-    color: #5c1263;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-#btn button:hover {
-    background-color: #a0ea99d7;
-}
-
-#timerAndAlert {
-    margin-bottom: 30px;
-}
-
-#timer {
-    text-align: center;
-    font-size: 28px;
-    color: #a0ea99;
-}
-
-#timer-stop {
-    text-align: center;
-    font-size: 28px;
-    color: #a0ea99;
-    display: none;
-}
-
-#alert {
-    text-align: center;
-    font-size: 16px;
-    color: #a0ea99;
-    margin-top: 10px;
-}
-
-@media all and (max-width: 525px) {
-    #table-a {
-        width: 252px;
-        height: 252px;
-    }
-
-    #table-a div {
-        width: 50px;
-        height: 50px;
-        font-size: 26px;
-        line-height: 50px;
-    }
-
-    .card {
-        width: 50px;
-        height: 50px;
-    }
 }

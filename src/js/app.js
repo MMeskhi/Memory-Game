@@ -1,9 +1,10 @@
 const table = [
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
+  [null, null, null, null, null, null],
 ];
 
 for (let i = 0; i < table.length; i++) {
@@ -22,11 +23,13 @@ for (let i = 0; i < table.length; i++) {
   }
 }
 
-const btn = document.getElementById("btn");
+const btn = document.querySelector(".btn1");
+const btnAgain = document.querySelector(".btn2");
 
 function start() {
   document.getElementById("table-a").style.display = "none";
   document.getElementById("table-b").style.display = "unset";
+  btn.style.display = "none";
 }
 
 function stop() {
@@ -34,8 +37,14 @@ function stop() {
   preventClick = true;
 }
 
+function startOver() {
+  window.location.reload();
+}
+
 btn.addEventListener("click", start);
 btn.addEventListener("click", timerStart);
+
+btnAgain.addEventListener("click", startOver);
 
 ///////////
 
@@ -56,6 +65,13 @@ const colors = [
   "violet",
   "purple",
   "gold",
+  "black",
+  "darkblue",
+  "darkred",
+  "lightgreen",
+  "hotpink",
+  "coral",
+  "beige",
 ];
 
 const cards = [...document.querySelectorAll(".card")];
@@ -106,9 +122,10 @@ function onCardClicked(e) {
     } else {
       combosFound++;
       clickedCard = null;
-      if (combosFound === 12) {
+      if (combosFound === 18) {
         document.getElementById("alert").innerHTML = "<h1>YOU WON!</h1>";
         stop();
+        btnAgain.style.display = "flex";
       }
     }
   }
@@ -123,9 +140,10 @@ function timer() {
     clearInterval(timerStart);
     document.getElementById("alert").innerHTML = "<h1>Game Over</h1>";
     stop();
+    btnAgain.style.display = "flex";
   }
 }
 
 function timerStart() {
-  setInterval(timer, 1000);
+  setInterval(timer, 1200);
 }
