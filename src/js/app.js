@@ -75,7 +75,6 @@ const colors = [
   "lightgreen",
   "hotpink",
   "coral",
-  "beige",
 ];
 
 // Connecting cards and colors.
