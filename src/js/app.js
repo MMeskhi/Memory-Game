@@ -1,3 +1,4 @@
+// Cards before game starts.
 const table = [
   [null, null, null, null, null, null],
   [null, null, null, null, null, null],
@@ -23,6 +24,9 @@ for (let i = 0; i < table.length; i++) {
   }
 }
 
+// Function for game start,
+// Page refresh for starting again,
+// When the game is over.
 const btn = document.querySelector(".btn1");
 const btnAgain = document.querySelector(".btn2");
 
@@ -47,8 +51,7 @@ btn.addEventListener("click", timerStart);
 
 btnAgain.addEventListener("click", startOver);
 
-///////////
-
+// Selecting colors and distributing them.
 let clickedCard = null;
 let preventClick = false;
 let combosFound = 0;
@@ -75,23 +78,25 @@ const colors = [
   "beige",
 ];
 
+// Connecting cards and colors.
 const cards = [...document.querySelectorAll(".card")];
 
 for (let color of colors) {
   const cardAIndex = parseInt(Math.random() * cards.length);
   const cardA = cards[cardAIndex];
   cards.splice(cardAIndex, 1);
-  cardA.className += ` ${color}`;
+  cardA.className += `${color}`;
   cardA.setAttribute("data-color", color);
 
   const cardBIndex = parseInt(Math.random() * cards.length);
   const cardB = cards[cardBIndex];
   cards.splice(cardBIndex, 1);
-  cardB.className += ` ${color}`;
+  cardB.className += `${color}`;
   cardB.setAttribute("data-color", color);
 }
 
-function onCardClicked(e) {
+// Card selecting and ifs when all the cards ar matched.
+function cardClicked(e) {
   const target = e.currentTarget;
 
   if (
@@ -133,6 +138,7 @@ function onCardClicked(e) {
   }
 }
 
+// Timer and ifs when the timer runs out.
 function timer() {
   let timeLeft = Number(document.getElementById("timer").innerText);
   timeLeft--;
