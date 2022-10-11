@@ -80,6 +80,16 @@ const colors = [
 // Connecting cards and colors.
 const cards = [...document.querySelectorAll(".card")];
 
+window.onload = function () {
+  var anchors = document.querySelectorAll(".row div");
+  for (var i = 0; i < anchors.length; i++) {
+    var anchor = anchors[i];
+    anchor.onclick = function () {
+      cardClicked(event);
+    };
+  }
+};
+
 for (let color of colors) {
   const cardAIndex = parseInt(Math.random() * cards.length);
   const cardA = cards[cardAIndex];
