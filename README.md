@@ -5,7 +5,7 @@
 #### Description
 
 - Fully responsive
-- Find two same colors sixteen times in 2 minutes to win
+- Find two same colors 18times in 2minutes to win
 
 #### Built with
 
