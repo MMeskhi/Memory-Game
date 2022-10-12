@@ -37,7 +37,7 @@ function start() {
 }
 
 function stop() {
-  document.getElementById("timer").style.display = "none";
+  timerStop();
   preventClick = true;
   clickedCard = null;
 }
@@ -46,15 +46,11 @@ function startOver() {
   window.location.reload();
 }
 
-btn.addEventListener("click", start);
-btn.addEventListener("click", timerStart);
-
-btnAgain.addEventListener("click", startOver);
-
 // Selecting colors and distributing them.
 let clickedCard = null;
 let preventClick = false;
 let combosFound = 0;
+let time = null;
 
 const colors = [
   "pink",
@@ -148,19 +144,27 @@ function cardClicked(e) {
 }
 
 // Timer and ifs when the timer runs out.
-function timer() {
+const timer = () => {
   let timeLeft = Number(document.getElementById("timer").innerText);
   timeLeft--;
   document.getElementById("timer").innerText = timeLeft;
 
   if (timeLeft === 0) {
-    clearInterval(timerStart);
     document.getElementById("alert").innerHTML = "<h1>Game Over</h1>";
     stop();
     btnAgain.style.display = "flex";
   }
-}
+};
 
-function timerStart() {
-  setInterval(timer, 1200);
-}
+const timerStart = () => {
+  time = setInterval(timer, 1000);
+};
+
+const timerStop = () => {
+  clearInterval(time);
+};
+
+btn.addEventListener("click", start);
+btn.addEventListener("click", timerStart);
+
+btnAgain.addEventListener("click", startOver);

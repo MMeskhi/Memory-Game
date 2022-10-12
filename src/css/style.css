@@ -135,23 +135,29 @@ button:hover {
     margin: 0 auto;
 }
 
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.timer span {
+    text-align: center;
+    font-size: 28px;
+    color: #f5007a;
+    font-weight: bold;
+}
+
+.timer span:not(:last-child) {
+    margin-right: 10px;
+}
+
+.timer span:last-child {
+    font-size: 22px;
+}
+
 #timerAndAlert {
     margin-bottom: 30px;
-    font-weight: bold;
-}
-
-#timer {
-    text-align: center;
-    font-size: 28px;
-    color: #f5007a;
-    font-weight: bold;
-}
-
-#timer-stop {
-    text-align: center;
-    font-size: 28px;
-    color: #f5007a;
-    display: none;
     font-weight: bold;
 }
 
@@ -159,7 +165,6 @@ button:hover {
     text-align: center;
     font-size: 16px;
     color: #f5007a;
-    margin-top: 10px;
     font-weight: bold;
 }
 
