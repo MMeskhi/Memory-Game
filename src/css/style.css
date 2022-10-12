@@ -2,14 +2,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: cursive;
 }
 
 body {
     background-color: #030e4f;
+    overflow: hidden;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(124deg, #000180, #202160, #502060, #600080, #6b2d5f);
+    background-size: 1800% 1800%;
+    z-index: -1;
+
+    animation: bgAnimation 10s ease infinite;
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
 }
 
 .container {
     margin: 2.5% auto 25px;
+    z-index: 10;
 }
 
 #table-a {
@@ -80,7 +112,7 @@ body {
 button {
     height: 40px;
     width: 120px;
-    background-color: #f49f1c;
+    background-color: #f5007a;
     color: #ffffff;
     cursor: pointer;
     text-transform: uppercase;
@@ -101,26 +133,30 @@ button:hover {
 
 #timerAndAlert {
     margin-bottom: 30px;
+    font-weight: bold;
 }
 
 #timer {
     text-align: center;
     font-size: 28px;
-    color: #f49f1c;
+    color: #f5007a;
+    font-weight: bold;
 }
 
 #timer-stop {
     text-align: center;
     font-size: 28px;
-    color: #f49f1c;
+    color: #f5007a;
     display: none;
+    font-weight: bold;
 }
 
 #alert {
     text-align: center;
     font-size: 16px;
-    color: #f49f1c;
+    color: #f5007a;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 @media all and (max-width: 525px) {
