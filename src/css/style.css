@@ -6,7 +6,6 @@
 }
 
 body {
-    background-color: #030e4f;
     overflow: hidden;
 }
 
@@ -131,6 +130,11 @@ button:hover {
     display: none;
 }
 
+.btn1, .btn2 {
+    width: 120px;
+    margin: 0 auto;
+}
+
 #timerAndAlert {
     margin-bottom: 30px;
     font-weight: bold;
@@ -160,6 +164,10 @@ button:hover {
 }
 
 @media all and (max-width: 525px) {
+    .container {
+        margin: 10% auto 25px;
+    }
+
     #table-a {
         width: 301px;
         height: 301px;
