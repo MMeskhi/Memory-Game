@@ -16,24 +16,27 @@ body {
     top: 0;
     bottom: 0;
     position: absolute;
-    background: linear-gradient(124deg, #000180, #202160, #502060, #600080, #6b2d5f);
-    background-size: 1800% 1800%;
+    background: linear-gradient(124deg, #000180, #202160, #502060, #4d0166, #5e2552);
+    background-size: 1000% 1000%;
     z-index: -1;
 
-    animation: bgAnimation 10s ease infinite;
+    -webkit-animation: bgAnimation 20s ease infinite;
+    -z-animation: bgAnimation 20s ease infinite;
+    -o-animation: bgAnimation 20s ease infinite;
+    animation: bgAnimation 20s ease infinite;
 }
 
 @keyframes bgAnimation {
     0% {
-        background-position: 0% 82%
+        background-position: 0% 50%
     }
 
     50% {
-        background-position: 100% 19%
+        background-position: 100% 50%
     }
 
     100% {
-        background-position: 0% 82%
+        background-position: 0% 50%
     }
 }
 
@@ -148,16 +151,8 @@ button:hover {
     font-weight: bold;
 }
 
-.timer span:not(:last-child) {
-    margin-right: 10px;
-}
-
-.timer span:last-child {
-    font-size: 22px;
-}
-
 #timerAndAlert {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
