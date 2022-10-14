@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive;
 }
 
 body {
@@ -117,6 +116,7 @@ button {
     text-transform: uppercase;
     font-weight: bold;
     transition: all 0.3s ease;
+    -webkit-appearance: none;
 }
 
 button:hover {
